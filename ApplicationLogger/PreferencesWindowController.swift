@@ -244,6 +244,8 @@ class PreferencesWindowController: NSWindowController, URLSessionDelegate {
             }
         }
         
+        print("test")
+        
         let fileHandle = FileHandle.init(forWritingAtPath: filePath)
         if fileHandle == nil {
             print("failed to make file handle")
