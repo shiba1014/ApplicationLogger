@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindowController" customModule="ApplicationLogger" customModuleProvider="target">
+            <connections>
+                <outlet property="generalTextView" destination="Xqg-p6-24H" id="Elq-aH-dvN"/>
+                <outlet property="generalView" destination="Ekz-J1-iYe" id="lTd-0y-075"/>
+                <outlet property="googleTextView" destination="22n-9A-K9n" id="5lB-YS-l9V"/>
+                <outlet property="googleView" destination="sAP-ai-d55" id="bCZ-cc-igH"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1024" height="617"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="0A135270-46C5-41DB-8961-076FEE3709B7" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="YGj-r3-sr0">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="vfY-vh-oNx"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="RzO-mL-wfe"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="uhq-6F-Hfa"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="dIt-yZ-Lwz"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="h67-jE-Iat"/>
+                    <toolbarItem implicitItemIdentifier="C12F2833-A948-494C-A7FE-42D6200A9ABF" label="General" paletteLabel="General" tag="-1" image="NSPreferencesGeneral" id="fCc-OB-ant">
+                        <connections>
+                            <action selector="pushedGeneralWithSender:" target="-2" id="iOv-fw-cgk"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="DFC598A5-7A1F-4AF4-9B36-41E06DA13D0F" label="Advanced" paletteLabel="Advanced" tag="-1" image="NSAdvanced" id="jAp-Pm-hZQ"/>
+                    <toolbarItem implicitItemIdentifier="9FE22272-66AE-4EDB-962C-DC2F500CB114" label="Google Login" paletteLabel="Google Login" tag="-1" image="NSUser" id="7AZ-I0-E6S">
+                        <connections>
+                            <action selector="pushedGoogleLoginWithSender:" target="-2" id="QQB-QF-udM"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="fCc-OB-ant"/>
+                    <toolbarItem reference="7AZ-I0-E6S"/>
+                    <toolbarItem reference="h67-jE-Iat"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+        <customView id="Ekz-J1-iYe" userLabel="General View">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="275"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jY2-Vd-n2p">
+                    <rect key="frame" x="20" y="20" width="435" height="235"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <clipView key="contentView" ambiguous="YES" id="TqK-uR-M5e">
+                        <rect key="frame" x="1" y="1" width="433" height="233"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Xqg-p6-24H">
+                                <rect key="frame" x="0.0" y="0.0" width="433" height="233"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="433" height="233"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Nwj-Zu-49q">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="dSq-IJ-Cq9">
+                        <rect key="frame" x="418" y="1" width="16" height="233"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <point key="canvasLocation" x="141.5" y="498.5"/>
+        </customView>
+        <customView id="sAP-ai-d55" userLabel="Google View">
+            <rect key="frame" x="0.0" y="0.0" width="476" height="275"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3k-a8-wou">
+                    <rect key="frame" x="20" y="20" width="436" height="235"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <clipView key="contentView" ambiguous="YES" id="dSN-Li-WXr">
+                        <rect key="frame" x="1" y="1" width="434" height="233"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="22n-9A-K9n">
+                                <rect key="frame" x="0.0" y="0.0" width="434" height="233"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="434" height="233"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="o6z-fx-wkh">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9CA-Bl-noB">
+                        <rect key="frame" x="419" y="1" width="16" height="233"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <point key="canvasLocation" x="139" y="837.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="NSUser" width="32" height="32"/>
+    </resources>
+</document>

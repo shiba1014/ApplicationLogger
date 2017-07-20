@@ -1,0 +1,6 @@
+framework module Pods_ApplicationLogger {
+  umbrella header "Pods-ApplicationLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}
